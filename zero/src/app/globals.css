@@ -47,3 +47,11 @@ body {
   font-size: 1rem;
   color: #94a3b8;
 }
+
+/* ABOUT */
+.about {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+  max-width: 600px;
+}
