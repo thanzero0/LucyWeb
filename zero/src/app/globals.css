@@ -71,3 +71,7 @@ body {
   50% { text-shadow: 0 0 16px rgba(34,211,238,0.8); }
   100% { text-shadow: 0 0 8px rgba(34,211,238,0.4); }
 }
+
+.title {
+  animation: pulse 3s infinite;
+}
