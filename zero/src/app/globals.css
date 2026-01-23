@@ -75,3 +75,30 @@ body {
 .title {
   animation: pulse 3s infinite;
 }
+
+/*HOVER*/
+
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.glitch:hover::before {
+  color: #22d3ee;
+  transform: translate(-2px, 0);
+  opacity: 0.8;
+}
+
+.glitch:hover::after {
+  color: #a855f7;
+  transform: translate(2px, 0);
+  opacity: 0.6;
+}
