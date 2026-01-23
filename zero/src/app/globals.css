@@ -102,3 +102,12 @@ body {
   transform: translate(2px, 0);
   opacity: 0.6;
 }
+
+/*JUDUL*/
+
+.section-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.3em;
+  color: #94a3b8;
+  margin-bottom: 12px;
+}
