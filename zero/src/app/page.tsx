@@ -12,6 +12,14 @@ export default function Home() {
           Silent. Precise. Wired to the dark side of the net.
         </p>
       </section>
+
+      <section className="about">
+        <h2 className="section-title">PROFILE</h2>
+        <p>
+          Lucy is a minimal interface concept inspired by cyberpunk aesthetics:
+          neon light, solitude, and digital resistance.
+        </p>
+      </section>
     </main>
   )
 }
