@@ -36,6 +36,22 @@ body {
   margin: 0 auto;
 }
 
+main {
+  animation: page-enter 0.8s ease-out both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* =====================
    HERO
 ===================== */
