@@ -213,3 +213,11 @@ main {
 .timeline {
   max-width: 600px;
 }
+
+.timeline ul {
+  list-style: none;
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
