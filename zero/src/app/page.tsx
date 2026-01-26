@@ -56,6 +56,17 @@ export default function Home() {
           </ul>
       </section>
 
+      <section className="gallery">
+        <h2 className="section-title">GALLERY</h2>
+
+          <div className="gallery-grid">
+            <img src="https://i.pinimg.com/1200x/d7/93/27/d793278a7b6337fd0cb2d2feb7274412.jpg" alt="Lucy cyberpunk portrait" />
+            <img src="https://i.pinimg.com/736x/f1/42/3e/f1423e97651fed8f3513ac0ae2a47da5.jpg" alt="Lucy netrunning scene" />
+            <img src="https://i.pinimg.com/736x/f6/0f/03/f60f03469884f72bbaf8cd672ae18226.jpg" alt="Lucy Night City" />
+            <img src="https://i.pinimg.com/736x/44/cb/c1/44cbc1c2aab51c919b86040156ac3862.jpg" alt="Lucy moon scene" />
+          </div>
+      </section>
+
     </main>
   )
 }
