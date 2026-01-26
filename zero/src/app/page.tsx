@@ -37,6 +37,10 @@ export default function Home() {
           </ul>
       </section>
 
+      <section className="timeline">
+
+      </section>
+
     </main>
   )
 }
