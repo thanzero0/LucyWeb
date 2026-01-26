@@ -201,3 +201,8 @@ main {
   letter-spacing: 0.05em;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+.skills li:hover {
+  background: rgba(34, 211, 238, 0.05);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.2);
+}
