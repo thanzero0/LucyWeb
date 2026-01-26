@@ -206,3 +206,10 @@ main {
   background: rgba(34, 211, 238, 0.05);
   box-shadow: 0 0 12px rgba(34, 211, 238, 0.2);
 }
+
+/* =====================
+   TIMELINE
+===================== */
+.timeline {
+  max-width: 600px;
+}
