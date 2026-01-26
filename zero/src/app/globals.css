@@ -192,3 +192,12 @@ main {
   gap: 12px;
   margin-top: 16px;
 }
+
+.skills li {
+  padding: 8px 12px;
+  border: 1px solid rgba(34, 211, 238, 0.25);
+  color: #cbd5f5;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
