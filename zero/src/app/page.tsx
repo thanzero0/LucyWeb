@@ -20,6 +20,13 @@ export default function Home() {
           neon light, solitude, and digital resistance.
         </p>
       </section>
+
+      <section className="quote">
+        <p>
+          "The net is vast... and silent."
+        </p>
+      </section>
+
     </main>
   )
 }
