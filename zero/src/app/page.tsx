@@ -27,6 +27,16 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="skills">
+        <h2 className="section-title">SKILLS</h2>
+          <ul>
+            <li>Netrunning</li>
+            <li>Cyber Hacking</li>
+            <li>Stealth Infiltration</li>
+            <li>Neural Interface Control</li>
+          </ul>
+      </section>
+
     </main>
   )
 }
