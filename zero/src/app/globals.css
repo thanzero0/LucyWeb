@@ -99,6 +99,16 @@ main {
   margin-bottom: 12px;
 }
 
+.about {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.about:hover {
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.15);
+  transform: translateY(-2px);
+}
+
+
 /* =====================
    ANIMATIONS
 ===================== */
@@ -167,3 +177,4 @@ main {
   padding-left: 16px;
   opacity: 0.9;
 }
+
