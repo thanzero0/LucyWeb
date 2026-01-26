@@ -38,7 +38,14 @@ export default function Home() {
       </section>
 
       <section className="timeline">
+        <h2 className="section-title">TIMELINE</h2>
 
+        <ul>
+          <li>
+            <span className="year">2076</span>
+            <p><Raised in isolation, trained for netrunning.</p>
+          </li>
+        </ul>
       </section>
 
     </main>
