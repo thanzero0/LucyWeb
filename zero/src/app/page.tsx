@@ -40,59 +40,36 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="cards">
+        <div className="card">
+          <h3 className="card-title">DESCRIPTION</h3>
+          <p className="card-text">
+            Lucy is a quiet netrunner living on the edge of Night City,
+            navigating data streams and isolation.
+          </p>
+        </div>
 
-      <section className="about">
-        <h2 className="section-title">PROFILE</h2>
-        <p>
-          Lucy is a minimal interface concept inspired by cyberpunk aesthetics:
-          neon light, solitude, and digital resistance.
-        </p>
-      </section>
+        <div className="card">
+          <h3 className="card-title">STORY</h3>
+          <p className="card-text">
+            From the shadows of the net to the chaos of reality,
+            her story unfolds through loss, trust, and escape.
+          </p>
+        </div>
 
-      <section className="quote">
-        <p>
-          "The net is vast... and silent."
-        </p>
-      </section>
+        <div className="card">
+          <h3 className="card-title">GALLERY</h3>
+          <p className="card-text">
+            Visual moments and fragments from Lucy’s world.
+          </p>
+        </div>
 
-      <section className="skills">
-        <h2 className="section-title">SKILLS</h2>
-          <ul>
-            <li>Netrunning</li>
-            <li>Cyber Hacking</li>
-            <li>Stealth Infiltration</li>
-            <li>Neural Interface Control</li>
-          </ul>
-      </section>
-
-      <section className="timeline">
-         <h2 className="section-title">TIMELINE</h2>
-
-         <ul>
-            <li>
-              <span className="year">2076</span>
-              <p>Raised in isolation, trained for netrunning.</p>
-            </li>
-            <li>
-              <span className="year">2077</span>
-              <p>Joins David Martinez crew.</p>
-            </li>
-            <li>
-              <span className="year">2077</span>
-              <p>Escapes Night City, heading to the Moon.</p>
-            </li>
-          </ul>
-      </section>
-
-      <section className="gallery">
-        <h2 className="section-title">GALLERY</h2>
-
-          <div className="gallery-grid">
-            <img src="https://i.pinimg.com/1200x/d7/93/27/d793278a7b6337fd0cb2d2feb7274412.jpg" alt="Lucy cyberpunk portrait" />
-            <img src="https://i.pinimg.com/736x/f1/42/3e/f1423e97651fed8f3513ac0ae2a47da5.jpg" alt="Lucy netrunning scene" />
-            <img src="https://i.pinimg.com/736x/f6/0f/03/f60f03469884f72bbaf8cd672ae18226.jpg" alt="Lucy Night City" />
-            <img src="https://i.pinimg.com/736x/44/cb/c1/44cbc1c2aab51c919b86040156ac3862.jpg" alt="Lucy moon scene" />
-          </div>
+        <div className="card card-disabled">
+          <h3 className="card-title">COMING SOON</h3>
+          <p className="card-text">
+            More data will be available soon.
+          </p>
+        </div>
       </section>
 
     </main>
