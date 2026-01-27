@@ -55,32 +55,34 @@ main {
 /* =====================
    HERO
 ===================== */
-.hero {
-  border-left: 2px solid #22d3ee;
-  padding-left: 24px;
+
+.hero-full {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  border-left: none;
+  padding-left: 0;
 }
 
-.tag {
-  font-size: 0.7rem;
-  letter-spacing: 0.25em;
-  color: #22d3ee;
-  opacity: 0.7;
+.hero-full .tag {
+  text-align: center;
 }
 
-.title {
-  font-size: 3rem;
-  letter-spacing: 0.2em;
-  color: #22d3ee;
-  text-shadow: 0 0 12px rgba(34, 211, 238, 0.6);
-  animation: pulse 3s infinite;
-  position: relative;
+.hero-full .title {
+  text-align: center;
+  font-size: 4rem;
 }
 
-.subtitle {
-  margin-top: 12px;
-  font-size: 1rem;
-  color: #94a3b8;
+.hero-full .subtitle {
+  text-align: center;
 }
+
+.hero-full + section {
+  margin-top: 64px;
+}
+
 
 /* =====================
    ABOUT
