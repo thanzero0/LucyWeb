@@ -14,18 +14,18 @@ export default function Home() {
       ty = e.clientY / window.innerHeight
     }
 
-    const animate = () => {
-      x += (tx - x) * 0.08
-      y += (ty - y) * 0.08
+    const loop = () => {
+      x += (tx - x) * 0.06
+      y += (ty - y) * 0.06
 
       document.documentElement.style.setProperty('--mx', `${x}`)
       document.documentElement.style.setProperty('--my', `${y}`)
 
-      requestAnimationFrame(animate)
+      requestAnimationFrame(loop)
     }
 
     window.addEventListener('pointermove', move)
-    animate()
+    loop()
 
     return () => window.removeEventListener('pointermove', move)
   }, [])
@@ -33,16 +33,8 @@ export default function Home() {
 
   return (
     <main className="container">
-      <section className="hero hero-full">
-        <span className="tag">CYBERPUNK NETRUNNER</span>
-
-        <h1 className="hero-title glitch" data-text="LUCY">
-          <span>L</span>
-          <span>U</span>
-          <span>C</span>
-          <span>Y</span>
-        </h1>
-
+      <section className="hero">
+        <h1 className="hero-title">LUCY</h1>
         <p className="hero-subtitle">
           Silent. Precise. Wired to the dark side of the net.
         </p>
