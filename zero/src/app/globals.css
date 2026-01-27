@@ -79,9 +79,6 @@ main {
   text-align: center;
 }
 
-.hero-full + section {
-  margin-top: 64px;
-}
 
 
 /* =====================
