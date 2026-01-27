@@ -1,8 +1,24 @@
+'use client'
+
+import { useEffect } from 'react'
+
 export default function Home() {
+  useEffect(() => {
+    const handleMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) * 100
+      const y = (e.clientY / window.innerHeight) * 100
+
+      document.documentElement.style.setProperty('--mx', `${x}%`)
+      document.documentElement.style.setProperty('--my', `${y}%`)
+    }
+
+    window.addEventListener('pointermove', handleMove)
+    return () => window.removeEventListener('pointermove', handleMove)
+  }, [])
   return (
     <main className="container">
       <section className="hero hero-full">
-        <span className="tag"> CYBERPUNK NETRUNNER</span>
+        <span className="tag">CYBERPUNK NETRUNNER</span>
 
         <h1 className="hero-title glitch" data-text="LUCY">
           LUCY

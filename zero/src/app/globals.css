@@ -56,62 +56,84 @@ main {
    HERO
 ===================== */
 
+:root {
+  --mx: 50%;
+  --my: 50%;
+}
+
 .hero-full {
   position: relative;
   min-height: 100vh;
   display: grid;
-  place-content: center;
+  place-items: center;
   text-align: center;
   overflow: hidden;
 }
 
-/* animated background */
+/* interactive animated background */
 .hero-full::before {
   content: '';
   position: absolute;
-  inset: -20%;
+  inset: -25%;
   background:
-    radial-gradient(circle at 30% 30%, rgba(34,211,238,0.15), transparent 40%),
-    radial-gradient(circle at 70% 60%, rgba(168,85,247,0.15), transparent 45%);
-  animation: hero-bg 14s ease-in-out infinite alternate;
+    radial-gradient(
+      circle at var(--mx) var(--my),
+      rgba(34,211,238,0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at calc(100% - var(--mx)) calc(100% - var(--my)),
+      rgba(168,85,247,0.14),
+      transparent 40%
+    );
+  filter: blur(40px);
+  animation: hero-float 16s ease-in-out infinite alternate;
   z-index: 0;
 }
 
-@keyframes hero-bg {
-  from { transform: translateY(0); }
-  to { transform: translateY(-60px); }
+@keyframes hero-float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-80px);
+  }
 }
 
-/* hero text */
+/* text layer */
 .hero-full > * {
   position: relative;
   z-index: 1;
 }
 
+/* title */
 .hero-title {
   font-size: clamp(4.5rem, 12vw, 7rem);
-  letter-spacing: 0.4em;
-  margin-left: 0.4em; /* optical centering */
+  letter-spacing: 0.42em;
+  margin-left: 0.42em;
   color: #22d3ee;
   text-shadow:
-    0 0 12px rgba(34,211,238,0.7),
-    0 0 40px rgba(34,211,238,0.25);
+    0 0 12px rgba(34,211,238,0.8),
+    0 0 48px rgba(34,211,238,0.25);
   animation: pulse 4.5s infinite;
 }
 
+/* subtitle */
 .hero-subtitle {
   margin-top: 24px;
   font-size: 0.85rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #94a3b8;
   opacity: 0.75;
 }
 
+/* tag */
 .hero-full .tag {
+  display: block;
   margin-bottom: 32px;
   font-size: 0.7rem;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.35em;
   opacity: 0.6;
 }
 
