@@ -75,31 +75,35 @@ main {
 .hero::before {
   content: '';
   position: absolute;
-  inset: -50%;
+  inset: -35%;
   background:
     radial-gradient(
-      800px circle at calc(var(--mx) * 100%) calc(var(--my) * 100%),
-      rgba(34,211,238,0.18),
-      transparent 65%
+      600px circle at calc(var(--mx) * 100%) calc(var(--my) * 100%),
+      rgba(34,211,238,0.45),
+      transparent 55%
     ),
     radial-gradient(
-      700px circle at calc((1 - var(--mx)) * 100%) calc((1 - var(--my)) * 100%),
-      rgba(168,85,247,0.16),
-      transparent 70%
+      500px circle at calc((1 - var(--mx)) * 100%) calc((1 - var(--my)) * 100%),
+      rgba(34,211,238,0.55)
+      transparent 60%
     );
-  filter: blur(140px);
-  animation: bg-drift-subtle 40s ease-in-out infinite alternate;
+  filter: blur(90px);
+  animation: bg-aggressive 12s linear infinite;
   z-index: 0;
 }
 
-@keyframes bg-drift-subtle {
-  from {
-    transform: translateY(0) rotate(0deg);
+@keyframes bg-aggressive {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  to {
-    transform: translateY(-40px) rotate(6deg);
+  50% {
+    transform: translate(-60px, -80px) rotate(8deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
   }
 }
+
 
 /* content */
 .hero > * {
