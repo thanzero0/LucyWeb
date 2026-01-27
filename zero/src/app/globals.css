@@ -1,50 +1,91 @@
-@import "tailwindcss";
-
-/* =====================
-   RESET
-===================== */
+/* Reset styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =====================
-   ROOT
-===================== */
-html,
-body {
+html, body {
   height: 100%;
   overflow-x: hidden;
-}
-
-body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #000;
   color: #e5e7eb;
 }
 
-/* =====================
-   LAYOUT
-===================== */
-.container {
-  min-height: 100vh;
-  padding: 80px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  max-width: 900px;
+/* Custom properties */
+:root {
+  --mouse-x: 0.5;
+  --mouse-y: 0.5;
+  --cyan: #22d3ee;
+  --cyan-dark: #0ea5e9;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-400: #9ca3af;
+}
+
+/* Custom utility classes */
+.cyberpunk-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 
-main {
-  animation: page-enter 0.8s ease-out both;
+.cyberpunk-btn {
+  background: var(--cyan);
+  color: black;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-@keyframes page-enter {
+.cyberpunk-btn:hover {
+  background: #0ea5e9;
+}
+
+.cyberpunk-btn-outline {
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cyberpunk-btn-outline:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+}
+
+.cyberpunk-card {
+  background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.cyberpunk-card:hover {
+  border-color: rgba(34, 211, 238, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cyberpunk-title {
+  color: var(--cyan);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(6px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -52,134 +93,32 @@ main {
   }
 }
 
-
-/* =====================
-   HERO
-===================== */
-
-:root {
-  --mx: 0.5;
-  --my: 0.5;
-}
-
-.hero {
-  position: relative;
-  height: 100svh;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  overflow: hidden;
-}
-
-/* animated background */
-.hero::before {
-  content: '';
-  position: absolute;
-  inset: -35%;
-  background:
-    radial-gradient(
-      600px circle at calc(var(--mx) * 100%) calc(var(--my) * 100%),
-      rgba(34,211,238,0.45),
-      transparent 55%
-    ),
-    radial-gradient(
-      500px circle at calc((1 - var(--mx)) * 100%) calc((1 - var(--my)) * 100%),
-      rgba(34,211,238,0.55)
-      transparent 60%
-    );
-  filter: blur(90px);
-  animation: bg-aggressive 12s linear infinite;
-  z-index: 0;
-}
-
-@keyframes bg-aggressive {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
   }
   50% {
-    transform: translate(-60px, -80px) rotate(8deg);
-  }
-  100% {
-    transform: translate(0, 0) rotate(0deg);
+    text-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
   }
 }
 
-
-/* content */
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-title {
-  font-size: clamp(5rem, 14vw, 8rem);
-  letter-spacing: 0.35em;
-  margin-left: 0.35em;
-  color: #22d3ee;
-  text-shadow:
-    0 0 20px rgba(34,211,238,0.9),
-    0 0 60px rgba(34,211,238,0.35);
-}
-
-.hero-subtitle {
-  margin-top: 24px;
-  font-size: 0.85rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #94a3b8;
-  opacity: 0.7;
-}
-
-/* =====================
-   CARD GRID
-===================== */
-.cards {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 80px 24px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
-/* mobile */
-@media (max-width: 640px) {
-  .cards {
-    grid-template-columns: 1fr;
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-/* =====================
-   CARD
-===================== */
-.card {
-  border: 1px solid rgba(34, 211, 238, 0.25);
-  background: rgba(2, 6, 23, 0.6);
-  padding: 24px;
-  min-height: 180px;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+.fade-in {
+  animation: fadeIn 1s ease-out;
 }
 
-.card:hover {
-  border-color: #22d3ee;
-  transform: translateY(-2px);
+.glow-text {
+  animation: glow 2s infinite;
 }
 
-.card-title {
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
-  color: #22d3ee;
-  margin-bottom: 12px;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #cbd5f5;
-}
-
-/* disabled / coming soon */
-.card-disabled {
-  opacity: 0.5;
-  pointer-events: none;
+.float-animation {
+  animation: float 3s ease-in-out infinite;
 }
