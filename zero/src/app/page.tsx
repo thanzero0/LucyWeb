@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="container">
       <section className="hero hero-full">
-        <span className="tag">// CYBERPUNK NETRUNNER</span>
+        <span className="tag"> CYBERPUNK NETRUNNER</span>
 
         <h1 className="hero-title glitch" data-text="LUCY">
           LUCY
