@@ -57,26 +57,11 @@ main {
 ===================== */
 
 .hero-full {
+  position: relative;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 16px;
-  border-left: none;
-  padding-left: 0;
-}
-
-.hero-full .tag {
-  text-align: center;
-}
-
-.hero-full .title {
-  text-align: center;
-  font-size: 4rem;
-}
-
-.hero-full .subtitle {
-  text-align: center;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 

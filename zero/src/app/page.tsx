@@ -2,16 +2,15 @@ export default function Home() {
   return (
     <main className="container">
       <section className="hero hero-full">
-        <div className="hero-bg" />
-          <div className="hero-content">
-            <span className="tag"> CYBERPUNK NETRUNNER</span>
-              <h1 className="title glitch" data-text="LUCY">
-                LUCY
-              </h1>
-              <p className="subtitle">
-                Silent. Precise. Wired to the dark side of the net.
-              </p>
-        </div>
+        <span className="tag">// CYBERPUNK NETRUNNER</span>
+
+        <h1 className="hero-title glitch" data-text="LUCY">
+          LUCY
+        </h1>
+
+        <p className="hero-subtitle">
+          Silent. Precise. Wired to the dark side of the net.
+        </p>
       </section>
 
 
