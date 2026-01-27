@@ -4,24 +4,43 @@ import { useEffect } from 'react'
 
 export default function Home() {
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
-      const x = (e.clientX / window.innerWidth) * 100
-      const y = (e.clientY / window.innerHeight) * 100
+    let x = 0.5
+    let y = 0.5
+    let tx = 0.5
+    let ty = 0.5
 
-      document.documentElement.style.setProperty('--mx', `${x}%`)
-      document.documentElement.style.setProperty('--my', `${y}%`)
+    const move = (e: PointerEvent) => {
+      tx = e.clientX / window.innerWidth
+      ty = e.clientY / window.innerHeight
     }
 
-    window.addEventListener('pointermove', handleMove)
-    return () => window.removeEventListener('pointermove', handleMove)
+    const animate = () => {
+      x += (tx - x) * 0.08
+      y += (ty - y) * 0.08
+
+      document.documentElement.style.setProperty('--mx', `${x}`)
+      document.documentElement.style.setProperty('--my', `${y}`)
+
+      requestAnimationFrame(animate)
+    }
+
+    window.addEventListener('pointermove', move)
+    animate()
+
+    return () => window.removeEventListener('pointermove', move)
   }, [])
+
+
   return (
     <main className="container">
       <section className="hero hero-full">
         <span className="tag">CYBERPUNK NETRUNNER</span>
 
         <h1 className="hero-title glitch" data-text="LUCY">
-          LUCY
+          <span>L</span>
+          <span>U</span>
+          <span>C</span>
+          <span>Y</span>
         </h1>
 
         <p className="hero-subtitle">

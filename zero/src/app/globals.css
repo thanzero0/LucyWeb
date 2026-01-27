@@ -15,6 +15,7 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -57,85 +58,95 @@ main {
 ===================== */
 
 :root {
-  --mx: 50%;
-  --my: 50%;
+  --mx: 0.5;
+  --my: 0.5;
 }
 
 .hero-full {
   position: relative;
-  min-height: 100vh;
+  min-height: 100svh;
   display: grid;
   place-items: center;
   text-align: center;
   overflow: hidden;
 }
 
-/* interactive animated background */
+/* background layer */
 .hero-full::before {
   content: '';
   position: absolute;
-  inset: -25%;
+  inset: -20%;
   background:
     radial-gradient(
-      circle at var(--mx) var(--my),
-      rgba(34,211,238,0.18),
-      transparent 35%
+      600px circle at calc(var(--mx) * 100%) calc(var(--my) * 100%),
+      rgba(34,211,238,0.35),
+      transparent 60%
     ),
     radial-gradient(
-      circle at calc(100% - var(--mx)) calc(100% - var(--my)),
-      rgba(168,85,247,0.14),
-      transparent 40%
+      500px circle at calc((1 - var(--mx)) * 100%) calc((1 - var(--my)) * 100%),
+      rgba(168,85,247,0.3),
+      transparent 65%
     );
-  filter: blur(40px);
-  animation: hero-float 16s ease-in-out infinite alternate;
+  filter: blur(60px);
+  animation: bg-drift 12s ease-in-out infinite alternate;
   z-index: 0;
 }
 
-@keyframes hero-float {
+@keyframes bg-drift {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(-80px);
+    transform: translateY(-60px);
   }
 }
 
-/* text layer */
+/* content layer */
 .hero-full > * {
   position: relative;
   z-index: 1;
 }
 
-/* title */
 .hero-title {
-  font-size: clamp(4.5rem, 12vw, 7rem);
-  letter-spacing: 0.42em;
-  margin-left: 0.42em;
+  display: flex;
+  gap: 0.35em;
+  justify-content: center;
+  font-size: clamp(5rem, 14vw, 8rem);
   color: #22d3ee;
   text-shadow:
-    0 0 12px rgba(34,211,238,0.8),
-    0 0 48px rgba(34,211,238,0.25);
-  animation: pulse 4.5s infinite;
+    0 0 18px rgba(34,211,238,0.9),
+    0 0 60px rgba(34,211,238,0.35);
 }
 
-/* subtitle */
+.hero-title span {
+  display: inline-block;
+  animation: letter-float 3s ease-in-out infinite;
+}
+
+.hero-title span:nth-child(2) { animation-delay: 0.1s; }
+.hero-title span:nth-child(3) { animation-delay: 0.2s; }
+.hero-title span:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes letter-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
 .hero-subtitle {
-  margin-top: 24px;
+  margin-top: 32px;
   font-size: 0.85rem;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: #94a3b8;
-  opacity: 0.75;
+  opacity: 0.7;
 }
 
-/* tag */
 .hero-full .tag {
-  display: block;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
   font-size: 0.7rem;
   letter-spacing: 0.35em;
-  opacity: 0.6;
+  opacity: 0.55;
 }
+
 
 
 /* =====================
