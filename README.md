@@ -1,19 +1,7 @@
 # Lucy Web: Cyberpunk Landing Page 🌃
 
-A striking landing page inspired by Lucy from Cyberpunk: Edgerunners. The site features a neon-infused, futuristic design aesthetic with a focus on immersive visuals.
+Lucy Web is a visually striking landing page inspired by Lucy from Cyberpunk: Edgerunners, built as a creative web design exercise that pushes the boundaries of what a single-page site can look like. The design draws heavily from the cyberpunk aesthetic — neon color palettes, futuristic typography, dark atmospheric backgrounds, and glowing accent elements that give the page an electric, otherworldly feel. Every section is crafted to feel immersive, as if the visitor just stepped into the world of Night City rather than opened a webpage.
 
-## 🌟 Features
+The project is built with Next.js and React, styled with Tailwind CSS for rapid and responsive layout composition. The component architecture makes each section modular and clean, while Tailwind handles the responsive breakpoints to ensure the design looks sharp on everything from ultrawide monitors to mobile phones. Smooth hover effects, dynamic layouts, and carefully chosen color transitions keep the page feeling alive and interactive without relying on heavy animation libraries. The result is a landing page that loads fast, feels premium, and genuinely captures the mood of its source material.
 
-- Cyberpunk-themed premium visual design
-- Dynamic layouts with smooth hover effects
-- Fully responsive architecture
-
-## 🛠️ Technologies Used
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-
-## 🚀 Getting Started
-
-Open `index.html` in your web browser to explore the landing page.
+Lucy Web was built as a personal exploration of character-themed web design — the kind of project where the goal isn't functionality but pure visual impact. It's about taking a character that represents a specific aesthetic and translating that energy into HTML, CSS, and interactive elements that feel authentic to the source. The project is deployed on Vercel and serves as both a design showcase and a reminder that web development can be an art form when you let the visuals lead.
